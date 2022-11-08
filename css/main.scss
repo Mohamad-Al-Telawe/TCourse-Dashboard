@@ -1,0 +1,16 @@
+@use './pages/variables.scss';
+@use './pages/navbar.scss';
+@use './pages/dashboard.scss';
+@use './pages/profile.scss';
+@use './pages/teachers.scss';
+@use './pages/projects.scss';
+@use './pages/courses.scss';
+@use './pages/plans.scss';
+@use './pages/files.scss';
+@use './pages/animations.scss';
+
+
+
+.main-section {
+  min-height: 100vh;
+}

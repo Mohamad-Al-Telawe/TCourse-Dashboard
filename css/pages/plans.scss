@@ -1,0 +1,94 @@
+main.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+  .plan {
+    background-color: var(--secondery-color);
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    &:nth-child(1) .top {
+      background-color: var(--green-color);
+      outline: 5px solid var(--green-color);
+    }
+    &:nth-child(2) .top {
+      background-color: var(--blue-color);
+      outline: 5px solid var(--blue-color);
+    }
+    &:nth-child(3) .top {
+      background-color: var(--orange-color);
+      outline: 5px solid var(--orange-color);
+    }
+    .top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+      border: 5px solid white;
+      margin-bottom: 10px;
+      span {
+        font-weight: bold;
+        font-size: 24px;
+      }
+      span:last-child {
+        font-size: 40px;
+        position: relative;
+        &::before {
+          content: "$";
+          font-size: 28px;
+          position: absolute;
+          left: 0;
+          transform: translateX(-101%);
+          -webkit-transform: translateX(-101%);
+          -moz-transform: translateX(-101%);
+          -ms-transform: translateX(-101%);
+          -o-transform: translateX(-101%);
+        }
+      }
+    }
+    .features {
+      .feature {
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 1px solid #333;
+        p {
+          flex: 1;
+          margin-left: 5px;
+        }
+        i.fa-check {
+          color: var(--green-color);
+        }
+        i.fa-xmark {
+          color: var(--red-color);
+        }
+        i.fa-circle-info {
+          cursor: pointer;
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+      padding: 7px 17px;
+      font-weight: bold;
+      background-color: var(--green-color);
+      color: var(--white-color);
+      border: none;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    > p {
+      color: var(--grey-color);
+      margin: 20px 0 0;
+      text-align: center;
+    }
+  }
+}

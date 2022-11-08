@@ -1,0 +1,117 @@
+/* Start Variables */
+
+:root {
+  --main-color: rgb(12, 15, 19);
+  --secondery-color: rgb(35, 35, 37);
+  --bg-color: rgb(24, 24, 24);
+  --main-transition: 0.5s;
+  --white-color: #eee;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --fa-style-family-classic: "Font Awesome 5 Free";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: var(--bg-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.container {
+  display: flex;
+}
+/* End Variables */
+/* Start Main Section */
+.main-section {
+  width: 100%;
+  padding: 20px;
+
+  > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    h3 {
+      font-size: 36px;
+      margin-left: 20px;
+      position: relative;
+      @media only screen and (max-width: 767px) {
+        & {
+          font-size: 26px;
+        }
+      }
+      &::after {
+        content: "";
+        background-color: var(--white-color);
+        position: absolute;
+        height: 2px;
+        width: 70%;
+        left: 0;
+        bottom: -35%;
+      }
+    }
+    .user-box {
+      display: flex;
+      align-items: center;
+      .notifications {
+        font-size: 30px;
+        margin-right: 10px;
+        position: relative;
+        @media only screen and (max-width: 767px) {
+          & {
+            font-size: 22px;
+          }
+        }
+        &::after {
+          content: "";
+          background-color: red;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          right: -3px;
+          top: 2px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+      .user-image {
+        width: 40px;
+        height: 40px;
+        @media only screen and (max-width: 767px) {
+          width: 30px;
+        }
+
+        img {
+          max-width: 100%;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+/* End Main Section */
